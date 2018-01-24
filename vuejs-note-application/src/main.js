@@ -6,16 +6,9 @@ import Firebase from 'firebase'
 
 Vue.config.productionTip = false
 
-let firebase = new Firebase('https://note-application-b064a.firebaseio.com');
+// let firebase = new Firebase('https://note-application-b064a.firebaseio.com');
 
-firebase.child('notes').set([
-	{title: 'Hello World', content: 'lorem ipsom'}
-	])
-firebase.child('notes').on('value', (snapshot => {
-	let notes = snapshot.val();
-	console.log(notes);
-	window.alert(notes[0].title)
-}))
+
 
 /* eslint-disable no-new */
 new Vue({
